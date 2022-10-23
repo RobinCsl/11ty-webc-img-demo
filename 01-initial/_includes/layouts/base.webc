@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eleventy Images + WebC rocks!</title>
+    </head>
+    <body @html="content"></body>
+</html>
