@@ -1,0 +1,8 @@
+<script webc:type="render" webc:is="template">
+function() {
+    if(!this.alt) {
+        throw new Error("[img.webc] the alt text is missing, no fun");
+    }
+    return `<img webc:raw src="${this.src}" alt="${this.alt}">`;
+}
+</script>

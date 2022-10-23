@@ -1,0 +1,9 @@
+---
+layout: layouts/base.webc
+---
+
+Fun with WebC
+
+<img alt="possum hanging from a palm leaf" src="https://images.unsplash.com/photo-1627224286457-923944e5b159?auto=format&fit=crop&w=387&q=80">
+
+<site-footer></site-footer>
