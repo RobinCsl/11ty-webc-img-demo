@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "patch-package"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,8 @@
     "@11ty/eleventy": "^2.0.0-canary.16",
     "@11ty/eleventy-img": "^2.0.1",
     "@11ty/eleventy-plugin-webc": "^0.5.1"
+  },
+  "devDependencies": {
+    "patch-package": "^6.5.0"
   }
 }

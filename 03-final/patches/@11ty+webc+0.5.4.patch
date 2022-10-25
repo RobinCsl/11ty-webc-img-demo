@@ -1,0 +1,20 @@
+diff --git a/node_modules/@11ty/webc/src/moduleScript.js b/node_modules/@11ty/webc/src/moduleScript.js
+index 8bbc4ab..82046f0 100644
+--- a/node_modules/@11ty/webc/src/moduleScript.js
++++ b/node_modules/@11ty/webc/src/moduleScript.js
+@@ -1,4 +1,4 @@
+-import { Module } from "module";
++import { Module, createRequire } from "module";
+ import vm from "vm";
+ 
+ class ModuleScript {
+@@ -44,7 +44,8 @@ Original error message: ${e.message}`);
+ 	// TODO use the `vm` approach from `evaluateAttribute` above.
+ 	static getModule(content, filePath) {
+ 		let m = new Module();
+-		// m.paths = module.paths;
++    const require = createRequire(import.meta.url);
++		m.paths = require.main.paths;
+ 		let trimmed = content.trim();
+ 
+ 		// replace `export default` with `module.exports`

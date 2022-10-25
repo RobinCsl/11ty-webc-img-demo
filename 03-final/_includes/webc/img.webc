@@ -1,6 +1,7 @@
 <script webc:type="render" webc:is="template">
-async function() {
-  let metadata = await this.Image(this.src, {
+const Image = require("@11ty/eleventy-img");
+module.exports = async function() {
+  let metadata = await Image(this.src, {
     widths: [300],
     formats: ["avif", "jpeg"],
     outputDir: "_site/img/",
@@ -15,6 +16,6 @@ async function() {
   };
 
   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return this.Image.generateHTML(metadata, imageAttributes);
+  return Image.generateHTML(metadata, imageAttributes);
 }
 </script>
